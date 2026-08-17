@@ -1,0 +1,17 @@
+@use 'resets';
+@use 'colors';
+@use 'config';
+@use 'meta/mixins';
+
+body {
+  min-width: var(--min-width);
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+}
