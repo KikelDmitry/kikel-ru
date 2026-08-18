@@ -25,7 +25,19 @@ const router = createRouter({
       },
     },
     galleryRoutes,
+    {
+      path: '/:catchAll(.*)',
+      redirect: '/404',
+    },
   ],
+});
+
+// HOOKS
+// make dynamic meta tags
+router.beforeEach((to) => {
+  const { title } = to.meta;
+  
+  document.title = title;
 });
 
 export default router;
