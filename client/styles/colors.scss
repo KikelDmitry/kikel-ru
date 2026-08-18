@@ -8,12 +8,12 @@
   --color-main-shaft: #323232;
   --color-input-primary: var(--color-primary);
 
-  &.dark-mode {
+  &.dark-theme {
     --color-primary: 221 221 221;
     --color-secondary: 24 24 25;
   }
 
-  &.light-mode {
+  &.light-theme {
     --color-primary: 24 24 25;
     --color-secondary: 221 221 221;
   }

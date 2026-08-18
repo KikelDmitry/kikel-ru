@@ -8,26 +8,22 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Kikel Ru</title>
     <script>
-      if (
-        window.matchMedia &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches
-      ) {
-        document.documentElement.classList.add('dark-mode');
-      } else {
-        document.documentElement.classList.add('light-mode');
-      }
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? document.documentElement.classList.add('dark-theme')
+        : document.documentElement.classList.add('light-theme');
     </script>
   </head>
   <body>
     <div id="app">
       <style>
-        html.dark-mode {
+        html.dark-theme {
           background: #000;
           color: #fff;
         }
-        html.light-mode {
+        html.light-theme {
           background: #fff;
           color: #000;
         }

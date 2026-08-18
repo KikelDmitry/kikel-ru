@@ -9,7 +9,7 @@
     "dev:client": "vite --host",
     "dev:server": "nodemon index.js",
     "start": "node index.js",
-    "build:client": "vite build --outDir '../dist'",
+    "build:client": "vite build",
     "prettier": "prettier --write --experimental-cli ./client"
   },
   "author": "Kikel Dmitry",
