@@ -27,7 +27,4 @@ export const galleryRoutes = {
   children: categories(),
 };
 
-console.log(galleryRoutes);
-
-
 export const galleryPath = galleryRoutes.path;

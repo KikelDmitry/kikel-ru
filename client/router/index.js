@@ -36,7 +36,7 @@ const router = createRouter({
 // make dynamic meta tags
 router.beforeEach((to) => {
   const { title } = to.meta;
-  
+
   document.title = title;
 });
 

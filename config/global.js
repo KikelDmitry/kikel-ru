@@ -1,5 +1,5 @@
 export const CONFIG = {
-	client: {
-		source: './client/'
-	}
-}
+  client: {
+    source: './client/',
+  },
+};

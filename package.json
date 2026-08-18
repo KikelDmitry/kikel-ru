@@ -10,7 +10,7 @@
     "dev:server": "nodemon index.js",
     "start": "node index.js",
     "build:client": "vite build",
-    "prettier": "prettier --write --experimental-cli ./client"
+    "prettier": "prettier --write --experimental-cli ./"
   },
   "author": "Kikel Dmitry",
   "license": "ISC",
