@@ -16,12 +16,12 @@ app.get("/pictures/:category", async (req, res) => {
 	const category = req.params.category.toLowerCase();
 
 	try {
-		const sheet = await getMetadataSheet(category);
+		const pictures = await getMetadataSheet(category);
 
 		res.json({
 			category,
-			count: sheet?.length,
-			sheet,
+			count: pictures?.length,
+			pictures,
 		});
 
 	} catch (err) {

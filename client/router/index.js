@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import KikelHome from '@/components/KikelHome.vue';
-import { galleryRoutes } from './gallery';
+import { galleryRoutes } from './gallery.js';
+import { htmlMeta } from '@/stores/meta.js';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -9,20 +10,13 @@ const router = createRouter({
       path: '/',
       name: 'Главная',
       component: KikelHome,
-      meta: {
-        title: 'Художник Владимир Кикель',
-        description: 'Description of Vladimir Kikel homepage',
-        noHeader: true,
-      },
+      meta: htmlMeta.home,
     },
     {
       path: '/about',
       name: 'Об авторе',
       component: () => import('@/views/ContentView.vue'),
-      meta: {
-        title: 'Об авторе',
-        description: 'Description of Vladimir Kikel about',
-      },
+      meta: htmlMeta.about,
     },
     galleryRoutes,
     {
@@ -35,8 +29,11 @@ const router = createRouter({
 // HOOKS
 // make dynamic meta tags
 router.beforeEach((to) => {
-  const { title } = to.meta;
-
+  const { title, description } = to.meta;
+  const metaDescription = document.createElement('meta');
+  metaDescription.name = 'description';
+  metaDescription.content = description;
+  document.head.append(metaDescription); 
   document.title = title;
 });
 

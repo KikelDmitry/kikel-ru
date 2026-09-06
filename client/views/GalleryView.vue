@@ -15,7 +15,11 @@ import GalleryViewer from '@/components/gallery/GalleryViewer.vue';
 import { useGallery } from '@/stores/gallery';
 import { storeToRefs } from 'pinia';
 import { onMounted } from 'vue';
+// import { useRoute } from 'vue-router';
+
 const store = useGallery();
+// const route = useRoute();
+// console.log(route.params);
 
 const { pictures, isLoaded, isError } = storeToRefs(store);
 
