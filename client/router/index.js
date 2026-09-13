@@ -31,9 +31,11 @@ const router = createRouter({
 router.beforeEach((to) => {
   const { title, description } = to.meta;
   const metaDescription = document.createElement('meta');
+
   metaDescription.name = 'description';
   metaDescription.content = description;
   document.head.append(metaDescription); 
+  
   document.title = title;
 });
 

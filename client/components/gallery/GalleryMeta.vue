@@ -34,7 +34,7 @@ const props = defineProps(['title', 'technique', 'dimensions', 'year']);
   &__title {
     padding-block: 0.4em;
     line-height: 1.4;
-    font-size: 26px;
+    font-size: 22px;
   }
 
   &__table {

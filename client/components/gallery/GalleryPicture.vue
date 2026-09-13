@@ -4,7 +4,7 @@
     :id="picture.id">
     <a
       @click.prevent
-      :href="`#${picture.id}`"
+      :href="`http://localhost:4300/images/${picture.n}.jpg`"
       class="picture__link">
       <picture
         class="picture__pic"
@@ -16,7 +16,7 @@
         <img
           @error="isError = true"
           @load="isLoaded = true"
-          :src="`${galleryPath}/${picture.n}.jpg`"
+          :src="`http://localhost:4300/images/${picture.n}.jpg`"
           :alt="picture.title"
           loading="lazy"
           class="picture__img" />

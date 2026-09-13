@@ -1,8 +1,8 @@
 <template>
   <div class="app">
-    <kikel-header
+    <!-- <kikel-header
       class="app__header"
-      v-if="!route.meta.noHeader"></kikel-header>
+      v-if="!route.meta.noHeader"></kikel-header> -->
     <main class="app__main">
       <router-view></router-view>
     </main>
@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import KikelHeader from '@/components/layout/KikelHeader.vue';
+// import KikelHeader from '@/components/layout/KikelHeader.vue';
 import KikelFooter from '@/components/layout/KikelFooter.vue';
 // import AppPreloader from '@/components/AppPreloader.vue';
 
@@ -32,6 +32,7 @@ const route = useRoute();
 
   &__main {
     flex-grow: 1;
+    display: grid;
   }
 
   &__footer {

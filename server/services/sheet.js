@@ -26,7 +26,6 @@ export async function getMetadataSheet(category) {
 		const filteredByCat = resp.data.values.filter((item) => {
 			return !!item[9] && (item[4] === genres[category])
 		})
-		const filesList = [];
 		const result = [];
 
 		for (let i = 0; i < filteredByCat.length; i++) {
@@ -39,7 +38,6 @@ export async function getMetadataSheet(category) {
 				genre: genres[category],
 				year: item[6],
 			};
-			filesList.push(item[0])
 			result.push(picture)
 		}
 

@@ -1,11 +1,16 @@
 import GalleryView from '@/views/GalleryView.vue';
-import { genres } from '../../config/category.js';
+import { genres, technique } from '../../config/category.js';
 import { htmlMeta } from '@/stores/meta.js';
 
 const categories = () => {
   const routes = [];
   for (const key in genres) {
-    const meta = htmlMeta.pictures[key] || null;
+    const meta = {
+      ...htmlMeta.pictures[key],
+      alias: key,
+    }
+    // const meta = htmlMeta.pictures[key] || null;
+    
     routes.push({
       path: key,
       name: genres[key],
@@ -13,6 +18,18 @@ const categories = () => {
       meta,
     });
   }
+  // injecting techinque
+  // for (const key in technique) {
+  //   const meta = htmlMeta.pictures[key] || null;
+  //   routes.push({
+  //     path: key,
+  //     name: technique[key],
+  //     component: GalleryView,
+  //     meta,
+  //   });
+  // }
+  // console.log(routes);
+  
   return routes;
 };
 
