@@ -7,11 +7,11 @@ const src = CONFIG.client.source;
 
 // https://vite.dev/config/
 export default defineConfig({
+  root: CONFIG.client.source,
   server: {
     port: 3000,
     open: true,
   },
-  root: CONFIG.client.source,
   plugins: [vue()],
   css: {
     preprocessorOptions: {

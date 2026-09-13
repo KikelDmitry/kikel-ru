@@ -13,5 +13,9 @@ export const htmlMeta = {
       title: 'Заголовок "Морской пейзаж"',
       description: 'описание морской пейзаж',
     },
+    stilllife: {
+      title: 'Заголовок "Натюрморт"',
+      description: 'описание натюрмортов',
+    }
   },
 };

@@ -5,10 +5,13 @@
   "main": "index.js",
   "type": "module",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KikelDmitry/kikel-ru"
+  },
   "scripts": {
     "dev:client": "vite --host",
     "dev:server": "nodemon ./server/index.js",
-    "dev": "npm run dev:server && npm run dev:client",
     "start": "node index.js",
     "build:client": "vite build",
     "prettier": "prettier --write --experimental-cli ./"
