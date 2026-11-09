@@ -2,7 +2,6 @@
   <div
     class="gallery-page"
     :class="{ 'is-loading': !isLoaded }">
-    <main-menu></main-menu>
     <gallery-list
       class="gallery-page__list"
       :pictures="pictures"></gallery-list>
@@ -11,7 +10,6 @@
 </template>
 
 <script setup>
-import MainMenu from '@/components/MainMenu.vue';
 import GalleryList from '@/components/gallery/GalleryList.vue';
 // import GalleryViewer from '@/components/gallery/GalleryViewer.vue';
 import { useGallery } from '@/stores/gallery';
@@ -50,20 +48,18 @@ watch(
 .gallery-page {
   min-height: 100%;
   width: 100%;
-  position: relative;
-  z-index: 1;
-  margin: 0 auto;
   max-width: 1920px;
   display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: 1fr;
-
+  
   &::before {
     content: '';
-    position: absolute;
+    position: fixed;
     z-index: 2;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.6);
+    background-image: url('@images/logo_animated.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
     pointer-events: none;
     opacity: 0;
     visibility: hidden;
@@ -78,6 +74,10 @@ watch(
       opacity: 1;
       pointer-events: all;
     }
+  }
+
+  &__list {
+    width: 100%;
   }
 }
 </style>

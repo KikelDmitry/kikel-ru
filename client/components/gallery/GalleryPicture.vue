@@ -34,7 +34,6 @@
 
 <script setup>
 import GalleryMeta from './GalleryMeta.vue';
-import { galleryPath } from '@/router/gallery';
 import { ref } from 'vue';
 const isLoaded = ref(false);
 const isError = ref(false);
@@ -45,7 +44,6 @@ const props = defineProps({
     required: true,
   },
 });
-const { title, technique } = props;
 </script>
 
 <style lang="scss" scoped>
@@ -59,7 +57,7 @@ const { title, technique } = props;
   &__pic {
     aspect-ratio: 1/1;
     display: flex;
-    transform: scale(0.7);
+    transform: scale(0.8);
     transition:
       transform 500ms,
       opacity 500ms;
@@ -101,6 +99,8 @@ const { title, technique } = props;
     }
 
     &.is-error {
+      border: 1px solid;
+
       img {
         display: none;
       }

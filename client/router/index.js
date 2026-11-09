@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import KikelHome from '@/components/KikelHome.vue';
+import KikelHomeAlt from '@/components/KikelHomeAlt.vue';
 import { galleryRoutes } from './gallery.js';
 import { htmlMeta } from '@/stores/meta.js';
 
@@ -9,7 +9,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'Главная',
-      component: KikelHome,
+      component: KikelHomeAlt,
       meta: htmlMeta.home,
     },
     {
